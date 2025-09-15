@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVision</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="html" href="SignUp_LogIn.html">
+  <link rel="style" href="SignUp_LogIn.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Favicon -->
+  <link rel="icon" type="image" href="favicon.jpeg">
+</head>
+<body>
+  <header class="header">
+    <!-- Logo -->
+    <a href="#hero" class="logo">EcoVision</a>
+
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#impact">Alert</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- Button -->
+    <a href="#demo" class="btn">Get Demo</a>
+
+    <!-- Mobile menu icon -->
+    <div class="menu" onclick="toggleMenu()">☰</div>
+  </header>
+
+  <main>
+    <!-- hero section -->
+    <section class="hero" id="hero">
+      <!-- Background video -->
+      <video autoplay muted loop playsinline class="hero-video">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support video.
+      </video>
+
+      <!-- Overlay content -->
+      <div class="hero-overlay">
+        <h1>Smarter Waste Detection </h1>
+        <span id="withai">
+          <h1>with AI</h1></span>
+        <p>
+          Empowering cities with real-time garbage monitoring and instant alerts to
+          keep environments clean and sustainable.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="btn-primary" id="signinBtn">Get Started →</button>
+          <!--<a href="#container" class="btn-primary">
+            <source src="SignUp_LogIn.html">Get Started →</a> --->
+          <a href="#demo" class="btn-secondary">Watch Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <h2 class="section-title">Our Key Features</h2>
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <i class="fas fa-camera feature-icon"></i>
+          <h3>Automated Detection</h3>
+          <p>AI cameras detect garbage piles in real time without manual reporting.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fas fa-bell feature-icon"></i>
+          <h3>Instant Alerts</h3>
+          <p>Authorities get instant notifications, reducing cleanup delays.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fas fa-shield-alt feature-icon"></i>
+          <h3>Proactive Approach</h3>
+          <p>Solves problems before citizens complain, unlike traditional systems.</p>
+        </div>
+
+        <div class="feature-card">
+          <i class="fas fa-city feature-icon"></i>
+          <h3>Scalable & Smart</h3>
+          <p>Easily expandable to multiple areas for efficient city management.</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- How it work section-->
+    <section class="how-it-works" id="how-it-works">
+      <h2 class="section-title">How It Works</h2>
+      <div class="steps">
+
+        <div class="step">
+          <span class="step-number">1</span>
+          <h3>Detection</h3>
+          <p>AI cameras scan streets and detect garbage piles in real time.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">2</span>
+          <h3>Instant Alerts</h3>
+          <p>Notifications are sent instantly to municipal authorities.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">3</span>
+          <h3>Action & Cleanup</h3>
+          <p>Sanitation teams respond quickly and clear the waste.</p>
+        </div>
+
+        <div class="step">
+          <span class="step-number">4</span>
+          <h3>Scalable Solution</h3>
+          <p>Easily expandable to multiple zones for smart city management.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Alert Section -->
+    <section class="alert-section" id="impact">
+        <h2 class="section-title">Live Alerts & Monitoring</h2>
+
+      <!-- Live Summary -->
+      <div class="alert-summary">
+        <div class="summary-card total">
+          <h3>Total Alerts</h3>
+          <p id="total-alerts">0</p>
+        </div>
+        <div class="summary-card pending">
+          <h3>Pending</h3>
+          <p id="pending-count">0</p>
+        </div>
+        <div class="summary-card process">
+          <h3>In Process</h3>
+          <p id="process-count">0</p>
+        </div>
+        <div class="summary-card resolved">
+          <h3>Resolved</h3>
+          <p id="resolved-count">0</p>
+        </div>
+      </div>
+
+      <!-- Alerts List -->
+      <div class="alert-controls">
+        <input type="text" id="search" placeholder="Search by location or camera ID...">
+        <select id="filter-status">
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="process">In Process</option>
+          <option value="resolved">Resolved</option>
+        </select>
+      </div>
+
+      <div class="alerts-container" id="alerts-container">
+        <!-- JS will inject alerts here -->
+      </div>
+
+    </section>
+
+      <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <h2 class="section-title">Contact Us</h2>
+      <p class="contact-subtitle">
+        Have questions, feedback, or want to collaborate? Reach out to us!
+      </p>
+
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="info-card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Office</h3>
+            <p>EcoVision HQ, Hyderabad, India</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-phone"></i>
+            <h3>Call Us</h3>
+            <p>+91 00000000000</p>
+          </div>
+          <div class="info-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>abcd@gmail.com</p>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contact-form">
+          <div class="form-group">
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group">
+            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+          <p id="form-status"></p>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- =========================
+     FOOTER SECTION
+========================= -->
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About -->
+    <div class="footer-col">
+      <h3>EcoVision</h3>
+      <p>
+        AI-powered waste detection & monitoring for cleaner, smarter cities.  
+        Together, we make our environment sustainable.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#impact">Live Alerts</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p><i class="fas fa-envelope"></i> abcd@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +91 00000000000</p>
+      <p><i class="fas fa-map-marker-alt"></i> Hyderabad, India</p>
+    </div>
+
+    <!-- Social -->
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© 2025 EcoVision. All Rights Reserved.</p>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+  <script src="SignUp_LogIn.js"></script>
+</body>
+</html>
